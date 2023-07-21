@@ -1,0 +1,48 @@
+.Cart_main {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart {
+    margin: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart_text {
+    padding: 0 20px;
+}
+
+.cart_text>span {
+    padding: 0 15px;
+}
+
+.total {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 25%;
+    right: 0;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+.total_title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.total span {
+    margin: 10px;
+}
+
+.total button {
+    margin: 0 auto;
+    padding: 9px;
+    background-color: aliceblue;
+    width: 60%;
+}

@@ -1,0 +1,36 @@
+.yourCart .textYourCart>img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.yourCart .textYourCart>span {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.yourCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.yourCart>i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.yourCart_btn {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 7px 35px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}

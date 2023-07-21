@@ -1,0 +1,28 @@
+.HomeProduct {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    position: relative;
+}
+
+.btn-danger,
+.btn-primary {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.filterProducts>a {
+    padding: 0 10px;
+    font-size: 22px;
+    color: rgb(185, 185, 49);
+    border-top: 2px solid rgb(185, 185, 49);
+    border-bottom: 2px solid rgb(185, 185, 49);
+    border-radius: 10px;
+}

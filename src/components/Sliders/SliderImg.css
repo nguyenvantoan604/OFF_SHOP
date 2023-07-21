@@ -1,0 +1,19 @@
+.SliderImg img {
+    height: 90vh;
+}
+
+.SliderImg {
+    margin-top: 53px;
+}
+
+.slick-dots {
+    margin-bottom: 30px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: yellow;
+}
+
+.slick-dots li button:before {
+    color: white;
+}
