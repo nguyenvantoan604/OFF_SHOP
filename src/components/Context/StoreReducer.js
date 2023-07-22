@@ -1,5 +1,4 @@
 
-
 const StoreReducer = (state, action) => {
   switch (action.type) {
       case "SET_PRODUCTS":
@@ -14,7 +13,7 @@ const StoreReducer = (state, action) => {
       case "CHANGE_PRODUCT":
           return {
               ...state,
-              cart: state.cart.map((c) => 
+              cart: state.cart.filter((c) => 
                   c.id === action.payload.id ?  c.qty=action.payload.qty  : c.qty
               )
           };

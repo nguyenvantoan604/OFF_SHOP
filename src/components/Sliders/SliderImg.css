@@ -17,3 +17,9 @@
 .slick-dots li button:before {
     color: white;
 }
+
+button.slick-arrow.slick-next {
+    margin-right: 60px;
+    top: 0;
+    display: none;
+}

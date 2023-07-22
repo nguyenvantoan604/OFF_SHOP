@@ -31,14 +31,17 @@ const Cart = () => {
                  style={{width:30}} 
                  type='number'
                  value={prod.qty}
-                 onChange={(e) =>(dispatch({
-                    type:"CHANGE_PRODUCT",
-                    payload:{
-                        id:prod.id,
-                        qty:e.target.value
-                    }
-
-                 }))}
+                 onChange={(e) => {
+                    const newQuantity = e.target.value;  
+                    const Checkqty = newQuantity < 1 ? 1 : newQuantity;
+                    dispatch({
+                      type: "CHANGE_PRODUCT",
+                      payload: {
+                        id: prod.id,
+                        qty: Checkqty, 
+                      },
+                    });
+                  }}
                   />
 
                  <i onClick={() => dispatch({
