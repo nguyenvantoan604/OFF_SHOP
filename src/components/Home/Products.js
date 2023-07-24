@@ -1,37 +1,24 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useStoreContext } from '../Context/Context';
+import ShortenText from '../ShortenText/ShortenText';
+import { Link } from 'react-router-dom';
 
-
-const Products = ({product}) => {
-
-  const {state:{cart},dispatch} = useStoreContext()
-
+const Products = ({ product }) => {
   return (
+    <Link to={`/DetailProduct/${product.id}`} style={{ textDecoration: 'none' }}>
+      <Card className='styleProduct' style={{ maxWidth:"100%", margin: 20, height: 360 }}>
+        <Card.Img style={{ height: 200, width:300 }} variant="top" src={product.thumbnail} />
+        <Card.Body style={{ position: 'relative'}}>
+          <Card.Title >
+          <ShortenText text={product.title} maxLength={28} />
+          </Card.Title>
+          <Card.Text style={{ fontSize: 14 }}>
+            <ShortenText text={product.description} maxLength={32} />
+          </Card.Text>
+          <Card.Subtitle style={{ fontSize: 18, color: 'red' }}>{product.price}$</Card.Subtitle>
+        </Card.Body>
+      </Card>
+    </Link>
+  );
+};
 
-    <Card className='styleProduct' style={{ width: '25%', margin:20,height:500}}>
-      <Card.Img style={{height:250}} variant="top" src={product.thumbnail}/>
-      <Card.Body style={{position:'relative'}}>
-        <Card.Title>{product.title}</Card.Title>
-        <Card.Text >
-            {product.description}
-        </Card.Text>
-        <Card.Subtitle style={{fontSize:18, color:"red"}}>{product.price}$</Card.Subtitle>
-        {cart.some(c =>c.id === product.id) ? (
-          <Button onClick={() =>dispatch({
-            type:"REMOVE_TO_CART",
-            payload:product
-          })} variant='danger'> Remove To Cart</Button>
-          
-        ) :(<Button onClick={()=>dispatch({
-          type:"ADD_TO_CART",
-          payload:product
-        })} variant="primary"> Add To Cart</Button>)}
-
-      </Card.Body>
-    </Card>
-
-  )
-}
-
-export default Products
+export default Products;

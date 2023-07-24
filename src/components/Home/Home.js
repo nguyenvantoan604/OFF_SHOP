@@ -8,6 +8,8 @@ const Home = () => {
   const { state:{products} } = useStoreContext();
 
 
+
+
   return (
     <div style={{backgroundColor:"rgb(51, 51, 51)", margin:"auto"}}>
       <div className="filterProducts" style={{display:"flex", alignItems:"center", justifyContent:"space-around",paddingTop:20}}>
@@ -19,6 +21,7 @@ const Home = () => {
       <div className="HomeProduct">    
 
         {products.map((product) => (
+        
           <Products product={product} key={product.id}/>
         ))}
 
